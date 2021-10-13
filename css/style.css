@@ -1,0 +1,167 @@
+:root {
+  --poppins: "Poppins", sans-serif;
+  --nunito: "Nunito", sans-serif;
+  --primary: #d43b3b;
+  --secondary: #000000b2;
+  --heading-size: 38px;
+  --black: black;
+  --white: white;
+  --text-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+/* ===============
+    Navbar start
+=================== */
+.header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  margin-top: 40px;
+}
+nav .logo {
+  width: 20%;
+}
+nav .menu {
+  width: 80%;
+}
+nav .menu ul {
+  display: flex;
+  justify-content: right;
+}
+nav .menu ul li {
+  padding: 0 20px;
+  font-family: var(--nunito);
+  font-weight: 600;
+  font-size: var(--text-size);
+  color: var(--white);
+}
+nav .menu ul li:hover {
+  color: var(--primary);
+  transition: 0.45s;
+}
+
+/* ===============
+    Banner start
+=================== */
+.banner-part {
+  background: url(../images/background-image.png) no-repeat;
+  background-size: cover;
+}
+.banner-part .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.45);
+  padding: 300px 0px;
+}
+.banner-part .overlay h2,
+h1 {
+  font-size: var(--heading-size);
+  color: var(--white);
+  font-family: var(--poppins);
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.banner-part .overlay p {
+  color: var(--white);
+  font-size: var(--text-size);
+  font-family: var(--poppins);
+  text-align: center;
+  width: 476px;
+  margin: 0 auto;
+}
+
+/* ===============
+    Banner end
+=================== */
+
+/* ===============
+    About part start
+=================== */
+#about-part {
+  margin-top: 100px;
+}
+#about-part .main {
+  display: flex;
+  justify-content: space-between;
+}
+#about-part .img {
+  width: 49%;
+}
+#about-part .img img {
+  width: 100%;
+}
+#about-part .details {
+  width: 49%;
+}
+#about-part .details h3 {
+  font-family: var(--poppins);
+  font-size: 38px;
+  font-weight: 600;
+}
+#about-part .details span {
+  font-weight: 400;
+  color: var(--secondary);
+}
+#about-part .details h2 {
+  font-family: var(--poppins);
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--primary);
+}
+#about-part .details h2 span {
+  color: var(--secondary);
+}
+#about-part .details p {
+  font-family: var(--poppins);
+  font-size: var(--text-size);
+  color: var(--secondary);
+  padding-bottom: 20px;
+}
+#about-part .details .icons {
+  display: flex;
+  justify-content: center;
+  color: #4267b2;
+}
+#about-part .details .icons i {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #000000b2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+#about-part .details .icons .tw {
+  color: #0077b5;
+}
+#about-part .details .icons .fb {
+  color: #4267b2;
+}
+#about-part .details .icons .stov {
+  color: #f47f24;
+}
+#about-part .details .icons .lin {
+  color: #1da1f2;
+}
+
+/* ===============
+    About part end
+=================== */
