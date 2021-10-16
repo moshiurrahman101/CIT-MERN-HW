@@ -1,0 +1,21 @@
+#banner {
+  @include divsize(100%, auto, url(../images/bg.png) no-repeat center);
+  background-size: cover;
+  .banner__overlay {
+    @include divsize(100%, 100%, rgba(0, 0, 0, 0.7));
+    text-align: center;
+    color: $othersColor;
+    padding: 200px 0;
+    h1 {
+      @include fontfamily($poppins, $headingFontSize, 600);
+    }
+    h2 {
+      @include fontfamily($poppins, $headingFontSize, 600);
+    }
+    p {
+      @include fontfamily($poppins, $buttonFontSize, 400);
+      width: 476px;
+      margin: 0 auto;
+    }
+  }
+}
