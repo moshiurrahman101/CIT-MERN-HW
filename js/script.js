@@ -1,0 +1,1 @@
+let n = prompt("Which number table you need?")
