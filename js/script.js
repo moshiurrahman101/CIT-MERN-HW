@@ -1,11 +1,22 @@
-let userInput = document.querySelector('#userInput');
-let actionButton = document.querySelector('#actionbtn');
-let output = document.querySelector('.output');
+let typeText = document.querySelector(".typeText")
 
-actionButton.addEventListener('click', () => {
-    output.innerHTML = "";
-    let number = userInput.value;
-    for (let i = 1; i <= 10; i++) {
-        output.innerHTML += `<li>${number} x ${i} = <span>${number * i}</span></li>`;   
+// console.log(typeText.dataset.text)
+let count = 0
+
+
+// cooking typing effect using this function
+function typeJS() {
+    // console.log(typeText.dataset.text[count])
+    
+    typeText.innerHTML += typeText.dataset.text[count]
+    count++
+    if (count > typeText.dataset.text.length) {
+        typeText.innerHTML = ""
+        count = 0
     }
-});
+}
+
+
+let stop = setInterval(()=>{
+    typeJS()
+},150)
