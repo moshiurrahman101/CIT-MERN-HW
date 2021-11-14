@@ -10,8 +10,20 @@
   position: absolute;
   transform: translate(-50%, -50%);
 }
-.wrapper h1 {
-  text-align: center;
+.wrapper .progressCounter {
+  text-align: right;
   font-size: 34px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.wrapper .bar {
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #d3d3d3;
+  border-radius: 20px;
+}
+.wrapper .bar .flexiblebar {
+  height: 100%;
+  border-radius: 20px;
 }

@@ -1,22 +1,21 @@
-let typeText = document.querySelector(".typeText")
+let flexiblebar = document.querySelector(".flexiblebar")
+let progressCounter = document.querySelector(".progressCounter")
 
-// console.log(typeText.dataset.text)
 let count = 0
+let delayTime = (1000 * flexiblebar.dataset.delay) / flexiblebar.dataset.percent
 
+flexiblebar.style.background = flexiblebar.dataset.bg
 
-// cooking typing effect using this function
-function typeJS() {
-    // console.log(typeText.dataset.text[count])
-    
-    typeText.innerHTML += typeText.dataset.text[count]
+function progressBar() {
     count++
-    if (count > typeText.dataset.text.length) {
-        typeText.innerHTML = ""
-        count = 0
+    flexiblebar.style.width = `${count}%`
+    progressCounter.innerHTML = `${count}%`
+    if (count == flexiblebar.dataset.percent) {
+        clearInterval(stop)
     }
 }
 
-
 let stop = setInterval(()=>{
-    typeJS()
-},150)
+    progressBar()
+},delayTime)
+
