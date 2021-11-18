@@ -1,21 +1,53 @@
-let flexiblebar = document.querySelector(".flexiblebar")
-let progressCounter = document.querySelector(".progressCounter")
+let countDownNumber = document.querySelectorAll('.countDownNumber')
+let countDownArray = Array.from(countDownNumber)
 
-let count = 0
-let delayTime = (1000 * flexiblebar.dataset.delay) / flexiblebar.dataset.percent
 
-flexiblebar.style.background = flexiblebar.dataset.bg
+// Count down plugin Js 
+countDownArray.map((item)=>{
+    let count = 0
 
-function progressBar() {
-    count++
-    flexiblebar.style.width = `${count}%`
-    progressCounter.innerHTML = `${count}%`
-    if (count == flexiblebar.dataset.percent) {
-        clearInterval(stop)
+    function countDown() {
+        count++
+        if (item.id == 'revenew') {
+            item.innerHTML = `$ ${count}`
+        }else{
+            item.innerHTML = `${count}`
+        }
+        if (count == item.dataset.countdownnumber) {
+            clearInterval(stop)
+        }
+    }
+
+    let stop = setInterval(()=>{
+        countDown()
+    },2000/item.dataset.countdownnumber)
+})
+
+
+
+// type js plugin
+let typeJsText = document.querySelector('.typeJsText')
+let textArray = typeJsText.dataset.typetext.split("")
+let counter = -1
+
+typeJsText.innerHTML = ""
+
+
+function typeJs() {
+    if (counter < typeJsText.dataset.typetext.length) {
+        counter++
+        typeJsText.innerHTML += typeJsText.dataset.typetext.charAt(counter)
+        textArray = typeJsText.dataset.typetext.split("")
+    }else{
+        textArray.pop()
+        typeJsText.innerHTML = textArray.join("")
+        if (textArray.length == 0) {
+            counter = -1
+        }
+
     }
 }
 
-let stop = setInterval(()=>{
-    progressBar()
-},delayTime)
-
+setInterval(()=>{
+    typeJs()
+},100)

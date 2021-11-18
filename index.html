@@ -8,15 +8,34 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <h4 class="progressCounter"></h4>
-      <div class="bar">
-        <div
-          class="flexiblebar"
-          data-percent="40"
-          data-delay="1"
-          data-bg="purple"
-        ></div>
+    <div class="counterWrapper">
+      <div class="container">
+        <h1>History of our company</h1>
+        <div class="countDownWrapper">
+          <div class="countDownItem">
+            <p class="text">Projects</p>
+            <p class="countDownNumber" data-countDownNumber="100">300+</p>
+          </div>
+          <div class="countDownItem">
+            <p class="text">Clients</p>
+            <p class="countDownNumber" data-countDownNumber="30">30+</p>
+          </div>
+          <div class="countDownItem">
+            <p class="text">Revenew</p>
+            <p class="countDownNumber" id="revenew" data-countDownNumber="1000">
+              $280590
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="typeJsWrapper">
+      <div class="container">
+        <h1
+          class="typeJsText"
+          data-typetext="I can hack Nasa! Ask me how?"
+        ></h1>
       </div>
     </div>
     <script src="js/script.js"></script>
