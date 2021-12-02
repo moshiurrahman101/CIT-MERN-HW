@@ -2,52 +2,63 @@ body {
   margin: 0;
   padding: 0;
 }
-.container {
-  width: 80%;
+.sectionWrapper {
+  width: 50%;
   margin: 0 auto;
-}
-.counterWrapper {
-  width: 100%;
-  background: rgb(0, 60, 138);
-  padding: 50px 0;
-}
-.counterWrapper h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 48px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #f5f5f5;
-  margin-bottom: 50px;
-}
-.counterWrapper .countDownWrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
 }
-.counterWrapper .countDownWrapper .countDownItem .text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  color: #ddd;
+.sectionWrapper .imageButton {
+  width: 200px;
+  border-radius: 15px;
+  padding: 10px;
+  background: #f5f5f5;
 }
-.counterWrapper .countDownWrapper .countDownItem .countDownNumber {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #ddd;
-  margin-top: 0px;
+.sectionWrapper .imageButton img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-/* type js style  */
-.typeJsWrapper {
-  padding: 50px;
+.detailsView {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  top: 0;
 }
-.typeJsWrapper .typeJsText {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 48px;
-  display: inline-block;
-  padding: 0;
-  border-right: 1px solid #414141;
+.detailsView .closeButton {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  background: rgb(37, 37, 37);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.detailsView .closeButton span {
+  width: 15px;
+  height: 7px;
+  background: white;
+  cursor: pointer;
+}
+.imageBox {
+  margin: 0 auto;
+  width: 600px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailsViewImage {
+  width: 100%;
+}
+.show {
+  display: block;
 }

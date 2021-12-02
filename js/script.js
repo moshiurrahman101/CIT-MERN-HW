@@ -1,53 +1,31 @@
-let countDownNumber = document.querySelectorAll('.countDownNumber')
-let countDownArray = Array.from(countDownNumber)
+let imageButton = document.querySelectorAll('.imageButton')
+let imageButtonArray = Array.from(imageButton)
+let closeButton = document.querySelector('.closeButton')
+let detailsView = document.querySelector('.detailsView')
+let imageBox = document.querySelector('.imageBox')
 
 
-// Count down plugin Js 
-countDownArray.map((item)=>{
-    let count = 0
+imageButtonArray.map((button)=>{
+    button.addEventListener("click", ()=>{
 
-    function countDown() {
-        count++
-        if (item.id == 'revenew') {
-            item.innerHTML = `$ ${count}`
-        }else{
-            item.innerHTML = `${count}`
-        }
-        if (count == item.dataset.countdownnumber) {
-            clearInterval(stop)
-        }
-    }
+        //set the image location
+        let buttonId = button.dataset.id
+        let fileLocation = `./images/${buttonId}.jpg`
+        
+        detailsView.classList.add("show")
 
-    let stop = setInterval(()=>{
-        countDown()
-    },2000/item.dataset.countdownnumber)
+        let viewCode = `<img src="${fileLocation}" alt="Image details" class="detailsViewImage" />`
+
+        imageBox.innerHTML += viewCode
+
+        
+    })
+})
+
+closeButton.addEventListener("click", () => {
+    detailsView.classList.remove("show")
+    imageBox.innerHTML = ""
+
 })
 
 
-
-// type js plugin
-let typeJsText = document.querySelector('.typeJsText')
-let textArray = typeJsText.dataset.typetext.split("")
-let counter = -1
-
-typeJsText.innerHTML = ""
-
-
-function typeJs() {
-    if (counter < typeJsText.dataset.typetext.length) {
-        counter++
-        typeJsText.innerHTML += typeJsText.dataset.typetext.charAt(counter)
-        textArray = typeJsText.dataset.typetext.split("")
-    }else{
-        textArray.pop()
-        typeJsText.innerHTML = textArray.join("")
-        if (textArray.length == 0) {
-            counter = -1
-        }
-
-    }
-}
-
-setInterval(()=>{
-    typeJs()
-},100)
